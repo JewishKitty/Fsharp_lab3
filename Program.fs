@@ -107,9 +107,9 @@ let rec main() =
         match System.Int32.TryParse(input) with
         |(true, number) -> 
                 if number = 1 then
-                        let digitProducts = readNumbers Seq.empty 
-                        let result = digitProducts |> Seq.map mult_of_dig_seq 
-                        if digitProducts = Seq.empty then
+                        let seq_for_mul = readNumbers Seq.empty 
+                        let result = seq_for_mul |> Seq.map mult_of_dig_seq 
+                        if seq_for_mul = Seq.empty then
                             printfn "Последовательность пуста "
                             continuation()
                         else
